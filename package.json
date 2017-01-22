@@ -1,0 +1,23 @@
+{
+  "name": "telegram-bot-es6",
+  "version": "1.0.0",
+  "description": "Boilerplate for developing chat bot with ES6 on AWS lambda",
+  "main": "index.js",
+  "scripts": {
+    "claudia": "claudia",
+    "transpile": "babel --presets es2015 src -o bot.js",
+    "create": "npm run transpile && claudia create --region us-east-1 --api-module bot",
+    "update": "npm run transpile && claudia update"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "claudia-bot-builder": "^2.12.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "claudia": "^2.6.0"
+  }
+}
