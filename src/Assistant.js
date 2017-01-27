@@ -5,7 +5,7 @@ let assistant =  (request) => {
     const command = request.text.substring(1)
     switch (command) {
       case "saluta":
-        response = "ciaone"
+        response = "ciao"
         break;
       default:
         response = "comando sconoscito"

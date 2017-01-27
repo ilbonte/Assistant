@@ -8,8 +8,8 @@ test("/saluta should return 'ciao' ", function () {
   let request = requestWithCommand('/saluta')
   equal(assistant(request), 'ciao')
 })
-function requestWithCommand(command) {
 
+function requestWithCommand(command) {
   return fullCommand = {
     "sender": 54579809,
     "text": command,
