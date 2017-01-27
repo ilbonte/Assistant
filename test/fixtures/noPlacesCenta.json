@@ -1,0 +1,17 @@
+
+[
+  {
+    "name": "Piazza di Centa",
+    "address": "P.le di Centa / Via Vannetti",
+    "id": "Piazza di Centa - Trento",
+    "bikes": 6,
+    "slots": 0,
+    "totalSlots": 12,
+    "position": [
+      46.07538723420181,
+      11.12382177686004
+    ]
+  }
+]
+
+
