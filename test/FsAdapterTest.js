@@ -10,7 +10,7 @@ test('can get data', function (done) {
     .then((bikes) => {
       deepEqual(expectedBikes, bikes)
       done()
-    }).catch(done)
+    }).catch(handle)
 })
 
 

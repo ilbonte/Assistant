@@ -12,7 +12,6 @@ module.exports = class FsAdapter {
           reject(err)
         } else {
           resolve(JSON.parse(data))
-          return
         }
       })
     })
