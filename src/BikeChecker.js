@@ -1,3 +1,4 @@
+
 module.exports = class BikeChecker {
   constructor(adapter) {
     this.adapter = adapter
@@ -14,8 +15,6 @@ module.exports = class BikeChecker {
     })
   }
 
-
-
   getDataFor(stationId) {
     for(let i=0; i< this.bikes.length; i++){
      if(this.bikes[i].id===stationId){
@@ -23,4 +22,6 @@ module.exports = class BikeChecker {
      }
     }
   }
+
+
 }

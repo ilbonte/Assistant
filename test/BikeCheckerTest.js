@@ -5,8 +5,7 @@ const bikesData = require('./fixtures/fullBike.json')
 const FsAdapter = require('../src/FsAdapter')
 const {resolve} = require('path')
 
-test("can get data from station id", function (done) {
-  const station = {
+const station = {
     "name": "Biblioteca",
     "address": "Via Alfieri / Via Torre Vanga",
     "id": "Biblioteca - Trento",
@@ -19,6 +18,7 @@ test("can get data from station id", function (done) {
     ]
   }
 
+test("can get data from station id", function (done) {
   let bikeChecker = new BikeChecker(new FsAdapter())
   let bikePath = resolve(__dirname,'./fixtures/fullBike.json')
 
@@ -26,5 +26,7 @@ test("can get data from station id", function (done) {
     deepEqual(station, bikeChecker.getDataFor('Biblioteca - Trento'))
     done()
   }).catch(done)
+
+
 
 })
