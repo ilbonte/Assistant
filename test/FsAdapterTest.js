@@ -13,8 +13,6 @@ test('can get data', function (done) {
     }).catch(handle)
 })
 
-
-
 function handle(){
   console.log("error")
 }

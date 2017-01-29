@@ -5,8 +5,7 @@ const expectedBikes = require('./fixtures/fullBike.json')
 
 test('can get data', function (done) {
   let gotAdapter = new GotAdapter()
-  gotAdapter.get('https://os.smartcommunitylab.it/core.mobility/bikesharing/trento').then(function (result) {
-    var bikes = result.body;
+  gotAdapter.get('https://os.smartcommunitylab.it/core.mobility/bikesharing/trento').then(function (bikes) {
     equal(expectedBikes.length, bikes.length)
     done()
   }).catch(handle)
