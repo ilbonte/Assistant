@@ -1,4 +1,4 @@
-let FsAdapter = require('../src/FsAdapter')
+let FsAdapter = require('../lib/FsAdapter')
 const {equal, deepEqual} = require('assert')
 const {test} = require('m.test')
 const expectedBikes = require('./fixtures/fullBike.json')

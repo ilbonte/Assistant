@@ -1,8 +1,8 @@
-let BikeChecker = require('../src/BikeChecker')
+let BikeFinder = require('../lib/BikeFinder')
 const {equal, deepEqual} = require('assert')
 const {test} = require('m.test')
 const bikesData = require('./fixtures/fullBike.json')
-const FsAdapter = require('../src/FsAdapter')
+const FsAdapter = require('../lib/FsAdapter')
 const {resolve} = require('path')
 
 const station = {
@@ -19,14 +19,22 @@ const station = {
   }
 
 test("can get data from station id", function (done) {
-  let bikeChecker = new BikeChecker(new FsAdapter())
+  let bikeFinder = new BikeFinder(new FsAdapter())
   let bikePath = resolve(__dirname,'./fixtures/fullBike.json')
 
-  bikeChecker.getData(bikePath).then(function () {
-    deepEqual(station, bikeChecker.getDataFor('Biblioteca - Trento'))
+  bikeFinder.getData(bikePath).then(function () {
+    deepEqual(station, bikeFinder.getDataFor('Biblioteca - Trento'))
     done()
   }).catch(done)
+})
 
 
+test("if invalid station return empty obj", function (done) {
+  let bikeFinder = new BikeFinder(new FsAdapter())
+  let bikePath = resolve(__dirname,'./fixtures/fullBike.json')
 
+  bikeFinder.getData(bikePath).then(function () {
+    deepEqual({}, bikeFinder.getDataFor('invalid'))
+    done()
+  }).catch(done)
 })
