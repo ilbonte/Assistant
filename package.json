@@ -2,12 +2,14 @@
   "name": "telegram-bot-es6",
   "version": "1.0.0",
   "description": "assistant bot",
+  "repository": "https://github.com/ilbonte/Assistant.git",
   "main": "index.js",
   "scripts": {
     "claudia": "claudia",
     "transpile": "babel --presets es2015 src -o bot.js",
     "create": "npm run transpile && claudia create --region us-east-1 --api-module bot",
-    "update": "npm run transpile && claudia update"
+    "update": "npm run transpile && claudia update",
+    "test": "m.test"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,6 @@
     "got": "^6.7.1"
   },
   "devDependencies": {
-    "m.test": "0.0.44"
+    "m.test": "0.0.46"
   }
 }
